@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict the activity based on sensor data. </h1>
+    <h3>Please enter the corresponding sensor values below</h3>
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="avg_rss12" id="avg_rss12" placeholder="avg_rss12" step="any">
+            <input type="number" name="var_rss12" id="var_rss12" placeholder="var_rss12" step="any">
+            <input type="number" name="avg_rss13" id="avg_rss13" placeholder="avg_rss13" step="any">
+            <input type="number" name="var_rss13" id="var_rss13" placeholder="var_rss13" step="any">
+            <input type="number" name="avg_rss23" id="avg_rss23" placeholder="avg_rss23" step="any">
+            <input type="number" name="var_rss23" id="var_rss23"placeholder="var_rss23" step="any">
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}

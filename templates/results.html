@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Activity Prediction</div>
+
+      <p>The predicted activity performed based on the input sensor data is {{prediction}}</p>
+</div>
+  <br>
+  <center>
+Legends: <br>
+Bending 1 = 0 <br>
+Bending 2 = 1 <br>
+Cycling   = 2 <br>
+Lying     = 3 <br>
+Sitting   = 4 <br>
+Standing  = 5 <br>
+Walking   = 6 <br>
+  </center>
+
+
+</body>
+
+</html>
